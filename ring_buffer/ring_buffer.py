@@ -6,21 +6,30 @@ class RingBuffer:
 
   def append(self, item):
     newest = 0
-    oldest = 0
-    if len(self.storage) < capacity:
-      self.storage.append(item)
-      newest = self.storage.index(item)
+    if None in self.storage:
+      newest = self.storage.index(None)
+      self.storage[newest] = item
+
     else:
-      self.storage[oldest] = value 
-      newest = self.storage.index(value)
-      if oldest + 1 > len(self.storage):
-        oldest = newest
+      self.storage[self.current] = item
+      if self.current < self.capacity - 1:
+        self.current += 1
       else:
-        oldest = oldest + 1
+        self.current = 0
         
 
   def get(self):
     return self.storage
 
 
-    
+arr = [2,6,8,9]
+new_ring= RingBuffer(3)
+new_ring.append(2)
+new_ring.append(3)
+new_ring.append(5)
+new_ring.append(6)
+
+
+print(new_ring.get())
+
+
