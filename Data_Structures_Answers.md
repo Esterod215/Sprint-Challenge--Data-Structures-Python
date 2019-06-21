@@ -17,7 +17,8 @@ Add your answers to the questions below.
 -The runtime for the provided code is O(n^2) because of the nested for loop
 
 6. What is the space complexity of the provided code in `names.py`?
--The space complexity is O(n^2) because you allocate memory for each loop.
+-The space complexity is O(1) because you allocate memory for each loop.
+
 7. What is the runtime complexity of your optimized code in `names.py`?
 -the runtime complexity is O(n)
 
