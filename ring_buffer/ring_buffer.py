@@ -19,7 +19,7 @@ class RingBuffer:
         
 
   def get(self):
-    return self.storage
+    return [index for index in self.storage if index != None]
 
 
 arr = [2,6,8,9]
