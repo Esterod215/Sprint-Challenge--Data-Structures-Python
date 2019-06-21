@@ -22,7 +22,6 @@ class RingBuffer:
     return [index for index in self.storage if index != None]
 
 
-arr = [2,6,8,9]
 new_ring= RingBuffer(3)
 new_ring.append(2)
 new_ring.append(3)
